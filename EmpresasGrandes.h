@@ -6,7 +6,7 @@
 using namespace std;
 
 class EmpresasGrandes : public Empresa{
-	private:
+	protected:
 		string DuenoG;
 		double IngresosG, EgresosG;
 		int NumDptosG;
@@ -14,7 +14,7 @@ class EmpresasGrandes : public Empresa{
 		string Vicepresidente, Proveedor;
 	public:
 		EmpresasGrandes();
-		EmpresasGrandes(string,double, double,int,string,string,string);
+		EmpresasGrandes(string,string,string,string,string,double, double,int,string,string,string);
 
 		string getDuenoG();
 		void setDuenoG(string);

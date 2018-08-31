@@ -8,7 +8,7 @@ Pasantes::Pasantes(){
 
 }
 
-Pasantes::Pasantes(string pIDPasante,int pDuracion):Persona(pNombre,pNumIdentidad,pEdad,pSexo,pNacionalidad){
+Pasantes::Pasantes(string pNombre, string pNumIdentidad, int pEdad, string pSexo, string pNacionalidad,string pIDPasante,int pDuracion):Persona(pNombre,pNumIdentidad,pEdad,pSexo,pNacionalidad){
 	IDPasante = pIDPasante;
 	Duracion = pDuracion;
 	

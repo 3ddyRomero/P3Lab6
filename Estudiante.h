@@ -11,7 +11,7 @@ class Estudiante : public Persona{
 		double Indice;
 	public:
 		Estudiante();
-		Estudiante(string,string,string,double);
+		Estudiante(string,string,int,string,string,string,string,string,double);
 
 		string getCarrera();
 		void setCarrera(string);

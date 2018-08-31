@@ -6,13 +6,13 @@
 using namespace std;
 
 class EmpresasMedianas : public Empresa{
-	private:
+	protected:
 		double Ingresos, Egresos;
 		int NumDptos;
 		string RTN;
 	public:
 		EmpresasMedianas();
-		EmpresasMedianas(double, double,int,string);
+		EmpresasMedianas(string,string,string,string,double, double,int,string);
 
 		double getIngresos();
 		void setIngresos(double);

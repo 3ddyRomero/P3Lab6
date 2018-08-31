@@ -7,7 +7,7 @@ using namespace std;
 
 
 class Empresa{
-	private:
+	protected:
 		string NombreEmpresa,FechaCreacion,Rubro,PermisoOperacion;
 	public:
 		Empresa();

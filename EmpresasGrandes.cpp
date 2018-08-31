@@ -8,7 +8,7 @@ EmpresasGrandes::EmpresasGrandes(){
 
 }
 
-EmpresasGrandes::EmpresasGrandes(string pDuenoG,double pIngresosG,double pEgresosG,int pNumDptosG,string pRTNG,string pVicepresidente, string pProveedor):Empresa(pNombreEmpresa,pFechaCreacion,pRubro,pPermisoOperacion){
+EmpresasGrandes::EmpresasGrandes(string pNombreEmpresa, string pFechaCreacion, string pRubro, string pPermisoOperacion,string pDuenoG,double pIngresosG,double pEgresosG,int pNumDptosG,string pRTNG,string pVicepresidente, string pProveedor):Empresa(pNombreEmpresa,pFechaCreacion,pRubro,pPermisoOperacion){
 	DuenoG = pDuenoG;
 	IngresosG = pIngresosG;
 	EgresosG = pEgresosG;
@@ -24,7 +24,7 @@ EmpresasGrandes::EmpresasGrandes(string pDuenoG,double pIngresosG,double pEgreso
 }
 
 string EmpresasGrandes::getDuenoG(){
-	return Dueno;
+	return DuenoG;
 }
 
 void EmpresasGrandes::setDuenoG(string pDuenoG){

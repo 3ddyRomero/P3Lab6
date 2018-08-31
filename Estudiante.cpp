@@ -7,12 +7,12 @@ Estudiante::Estudiante(){
 
 }
 
-Estudiante::Estudiante(string pCarrera,string pUniversidad,string pNumCuenta, double pIndice):Persona(pNombre,pNumIdentidad,pEdad,pSexo,pNacionalidad){
+Estudiante::Estudiante(string pNombre, string pNumIdentidad, int pEdad, string pSexo, string pNacionalidad,string pCarrera,string pUniversidad,string pNumCuenta, double pIndice):Persona(pNombre,pNumIdentidad,pEdad,pSexo,pNacionalidad){
 	Carrera = pCarrera;
 	Universidad = pUniversidad;
 	NumCuenta = pNumCuenta;
 	Indice = pIndice;
-	
+
 	Nombre = pNombre;
 	NumIdentidad = pNumIdentidad;
 	Edad = pEdad;

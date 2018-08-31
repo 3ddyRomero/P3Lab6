@@ -7,7 +7,7 @@ using namespace std;
 
 
 class Persona{
-	private:
+	protected:
 		string Nombre,NumIdentidad;
 		int Edad;
 		string Sexo,Nacionalidad;

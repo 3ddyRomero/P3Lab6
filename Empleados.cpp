@@ -1,5 +1,5 @@
 #include "Persona.h"
-#include "Empleado.h"
+#include "Empleados.h"
 #include <iostream>
 
 using namespace std;
@@ -8,7 +8,7 @@ Empleados::Empleados(){
 
 }
 
-Empleados::Empleados(int pNumEmpleado,double pSalario):Persona(pNombre,pNumIdentidad,pEdad,pSexo,pNacionalidad){
+Empleados::Empleados(string pNombre, string pNumIdentidad, int pEdad, string pSexo, string pNacionalidad,int pNumEmpleado,double pSalario):Persona(pNombre,pNumIdentidad,pEdad,pSexo,pNacionalidad){
 	NumEmpleado = pNumEmpleado;
 	Salario = pSalario;
 
@@ -23,7 +23,7 @@ int Empleados::getNumEmpleado(){
 	return NumEmpleado;
 }
 
-void Empleados::setNumEmpleado(int pIndice){
+void Empleados::setNumEmpleado(int pNumEmpleado){
 	NumEmpleado = pNumEmpleado;
 }
 

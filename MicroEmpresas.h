@@ -6,11 +6,11 @@
 using namespace std;
 
 class MicroEmpresas : public Empresa{
-	private:
+	protected:
 		string Dueno;
 	public:
 		MicroEmpresas();
-		MicroEmpresas(string);
+		MicroEmpresas(string,string,string,string,string);
 
 		string getDueno();
 		void setDueno(string);

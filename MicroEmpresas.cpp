@@ -8,7 +8,7 @@ MicroEmpresas::MicroEmpresas(){
 
 }
 
-MicroEmpresas::MicroEmpresas(string pDueno):Empresa(pNombreEmpresa,pFechaCreacion,pRubro,pPermisoOperacion){
+MicroEmpresas::MicroEmpresas(string pNombreEmpresa, string pFechaCreacion, string pRubro, string pPermisoOperacion,string pDueno):Empresa(pNombreEmpresa,pFechaCreacion,pRubro,pPermisoOperacion){
 	Dueno = pDueno;
 	
 	NombreEmpresa = pNombreEmpresa;

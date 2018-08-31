@@ -8,7 +8,7 @@ EmpresasMedianas::EmpresasMedianas(){
 
 }
 
-EmpresasMedianas::EmpresasMedianas(double pIngresos,double pEgresos,int pNumDptos,string pRTN):Empresa(pNombreEmpresa,pFechaCreacion,pRubro,pPermisoOperacion){
+EmpresasMedianas::EmpresasMedianas(string pNombreEmpresa, string pFechaCreacion, string pRubro, string pPermisoOperacion,double pIngresos,double pEgresos,int pNumDptos,string pRTN):Empresa(pNombreEmpresa,pFechaCreacion,pRubro,pPermisoOperacion){
 	Ingresos = pIngresos;
 	Egresos = pEgresos;
 	NumDptos = pNumDptos;

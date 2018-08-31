@@ -34,7 +34,7 @@ int Persona::getEdad(){
 	return Edad;
 }
 
-void Persona::setEdad(string pEdad){
+void Persona::setEdad(int pEdad){
 	Edad = pEdad;
 }
 

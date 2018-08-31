@@ -6,12 +6,12 @@
 using namespace std;
 
 class Empleados : public Persona{
-	private:
+	protected:
 		int NumEmpleado;
 		double Salario;
 	public:
 		Empleados();
-		Empleados(int, double);
+		Empleados(string,string,int,string,string,int, double);
 
 		int getNumEmpleado();
 		void setNumEmpleado(int);
