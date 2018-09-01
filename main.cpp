@@ -17,6 +17,8 @@ int menu();
 void llenarVectorMicroEmpresas(vector<MicroEmpresas*>& ,int );
 void llenarVectorEstudiantes(vector<Estudiante*>& ,int );
 
+void llenarVectorEmpleado(vector<Empleados*>& ,int);
+
 void printVectorEstudiante(vector<Estudiante*>, string);
 void printVectorEstudianteTodos(vector<Estudiante*>);
 
