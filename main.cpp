@@ -188,6 +188,46 @@ void llenarVectorEstudiantes(vector<Estudiante*>& pVectorEstudiante,int cantidad
         }
 }
 
+void llenarVectorEmpleado(vector<Empleados*>& pVectorEmpleados,int cantidadEmpleados){
+        Empleados* empleado;
+        string nombre,numID;
+		int edad;
+		string sexo,nacionalidad;
+
+		int numIDEmpleado;
+        double salario;
+        
+        for(int i = 0;i<cantidadEmpleados;i++){
+                empleado = new Empleados();
+                cout<<"Ingrese el Nombre del Estudiante: ";
+                cin>>nombre;
+                cout<<"Ingrese el Numero de ID del Estudiante: ";
+                cin>>numID;
+                cout<<"Ingrese la Edad del Estudiante: ";
+                cin>>edad;
+                cout<<"Ingrese el Sexo del Estudiante: ";
+                cin>>sexo;
+                cout<<"Ingrese la Nacionalidad del Estudiante: ";
+                cin>>nacionalidad;
+
+                cout<<"Ingrese el Numero identificador del Empleado: ";
+                cin>>numIDEmpleado;
+                cout<<"Ingrese el Salario del Empleado: ";
+                cin>>salario;
+
+                        empleado->setNombre(nombre);
+                        empleado->setNumIdentidad(numID);
+                        empleado->setEdad(edad);
+                        empleado->setSexo(sexo);
+                        empleado->setNacionalidad(nacionalidad);
+
+                        empleado->setNumEmpleado(numIDEmpleado);
+                        empleado->setSalario(salario);
+
+                pVectorEmpleados.push_back(empleado);
+        }
+}
+
 void printVectorEstudiante(vector<Estudiante*> pVectorEstudiante,string filtrar){
         cout<<endl<<"*****Reclutas Estudiantes"<<" de "<<filtrar<<"*****"<<endl;
 
