@@ -18,17 +18,24 @@ void llenarVectorMicroEmpresas(vector<MicroEmpresas*>& ,int );
 void llenarVectorEstudiantes(vector<Estudiante*>& ,int );
 
 void llenarVectorEmpleado(vector<Empleados*>& ,int);
+void llenarVectorPasantes(vector<Pasantes*>& ,int);
+
+void deleteContentsVectorEmpleado(vector<Empleados*>& , int );
 
 void printVectorEstudiante(vector<Estudiante*>, string);
 void printVectorEstudianteTodos(vector<Estudiante*>);
 
+void printVectorMicro(vector<MicroEmpresas*> );
+
 int main(){
 char ejecucion = 'y';
-int cMicro,cEstu;
+int cMicro,cEstu,cEmp,cPas;
+int eEmp,ePas;
 string fil;
 vector<MicroEmpresas*> miVectorMicroEmpresas;
 vector<Estudiante*> miVectorEstudiante;
-
+vector<Empleados*> miVectorEmpleado;
+vector<Pasantes*> miVectorPasantes;
 
 
 do{
@@ -57,24 +64,27 @@ do{
         }
         case 4:{
             printVectorEstudianteTodos(miVectorEstudiante);
-
-
+            llenarVectorEmpleado(miVectorEmpleado, cEmp);
 
         	break;
         }
         case 5:{
             printVectorEstudianteTodos(miVectorEstudiante);
-
-            
+            llenarVectorPasantes(miVectorPasantes, cPas);
 
         	break;
         }
         case 6:{
+            cout<<"Ingrese la posicion a Eliminar: ";
+        	cin>>eEmp;
+            deleteContentsVectorEmpleado(miVectorEmpleado,eEmp);
 
             break;
         }
         case 7:{
-
+            cout<<"Ingrese la posicion a Eliminar: ";
+        	cin>>ePas;
+            deleteContentsVectorEmpleado(miVectorEmpleado,ePas);
            
 
             break;
@@ -85,7 +95,7 @@ do{
             break;
         }
         case 9:{
-            
+            printVectorMicro(miVectorMicroEmpresas);
 
             break;
         }
@@ -141,6 +151,15 @@ void llenarVectorMicroEmpresas(vector<MicroEmpresas*>& pVectorMicroEmpresas,int 
                         microempresas->setDueno(dueno);
 
                 pVectorMicroEmpresas.push_back(microempresas);
+        }
+}
+void printVectorMicro(vector<MicroEmpresas*> pVectorMicro){
+        cout<<endl<<"*****Empresas*****"<<endl;
+
+        for(int i=0;i<pVectorMicro.size();i++){
+        	
+                cout<<"Nombre: "<<pVectorMicro[i]->getDueno()<<endl;
+        	
         }
 }
 
@@ -230,6 +249,46 @@ void llenarVectorEmpleado(vector<Empleados*>& pVectorEmpleados,int cantidadEmple
         }
 }
 
+void llenarVectorPasantes(vector<Pasantes*>& pVectorPasantes,int cantidadPasantes){
+        Pasantes* pasantes;
+        string nombre,numID;
+		int edad;
+		string sexo,nacionalidad;
+
+		string numIDpasantes;
+        int duracion;
+        
+        for(int i = 0;i<cantidadPasantes;i++){
+                pasantes = new Pasantes();
+                cout<<"Ingrese el Nombre del Estudiante: ";
+                cin>>nombre;
+                cout<<"Ingrese el Numero de ID del Estudiante: ";
+                cin>>numID;
+                cout<<"Ingrese la Edad del Estudiante: ";
+                cin>>edad;
+                cout<<"Ingrese el Sexo del Estudiante: ";
+                cin>>sexo;
+                cout<<"Ingrese la Nacionalidad del Estudiante: ";
+                cin>>nacionalidad;
+
+                cout<<"Ingrese el Numero identificador del Empleado: ";
+                cin>>numIDpasantes;
+                cout<<"Ingrese el Salario del Empleado: ";
+                cin>>duracion;
+
+                        pasantes->setNombre(nombre);
+                        pasantes->setNumIdentidad(numID);
+                        pasantes->setEdad(edad);
+                        pasantes->setSexo(sexo);
+                        pasantes->setNacionalidad(nacionalidad);
+
+                        pasantes->setIDPasante(numIDpasantes);
+                        pasantes->setDuracion(duracion);
+
+                pVectorPasantes.push_back(pasantes);
+        }
+}
+
 void printVectorEstudiante(vector<Estudiante*> pVectorEstudiante,string filtrar){
         cout<<endl<<"*****Reclutas Estudiantes"<<" de "<<filtrar<<"*****"<<endl;
 
@@ -268,5 +327,27 @@ void printVectorEstudianteTodos(vector<Estudiante*> pVectorEstudiante){
                     <<"Indice: "<<pVectorEstudiante[i]->getIndice()<<endl;
         	
         }
+}
+
+void deleteContentsVectorEmpleado(vector<Empleados*>& pVectorEmpleados, int pos){
+    for(int i=0;i<pVectorEmpleados.size();i++){
+        if(pVectorEmpleados[i] == pVectorEmpleados[pos]){
+
+        pVectorEmpleados.erase (pVectorEmpleados.begin()+pos-1);
+       
+        }
+    }
+    
+}
+
+void deleteContentsVectorPasante(vector<Pasantes*>& pVectorPasantes, int pos){
+    for(int i=0;i<pVectorPasantes.size();i++){
+        if(pVectorPasantes[i] == pVectorPasantes[pos]){
+
+        pVectorPasantes.erase (pVectorPasantes.begin()+pos-1);
+       
+        }
+    }
+    
 }
 
