@@ -21,6 +21,7 @@ void llenarVectorEmpleado(vector<Empleados*>& ,int);
 void llenarVectorPasantes(vector<Pasantes*>& ,int);
 
 void deleteContentsVectorEmpleado(vector<Empleados*>& , int );
+void deleteContentsVectorPasante(vector<Pasantes*>& , int );
 
 void printVectorEstudiante(vector<Estudiante*>, string);
 void printVectorEstudianteTodos(vector<Estudiante*>);
@@ -75,22 +76,23 @@ do{
         	break;
         }
         case 6:{
-            cout<<"Ingrese la posicion a Eliminar: ";
-        	cin>>eEmp;
-            deleteContentsVectorEmpleado(miVectorEmpleado,eEmp);
+            
 
             break;
         }
         case 7:{
             cout<<"Ingrese la posicion a Eliminar: ";
-        	cin>>ePas;
-            deleteContentsVectorEmpleado(miVectorEmpleado,ePas);
+        	cin>>eEmp;
+            deleteContentsVectorEmpleado(miVectorEmpleado,eEmp);
+
            
 
             break;
         }
         case 8:{
-
+            cout<<"Ingrese la posicion a Eliminar: ";
+        	cin>>ePas;
+            deleteContentsVectorPasante(miVectorPasantes,ePas);            
             
             break;
         }
