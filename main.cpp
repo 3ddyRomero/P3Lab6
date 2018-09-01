@@ -18,6 +18,7 @@ void llenarVectorMicroEmpresas(vector<MicroEmpresas*>& ,int );
 void llenarVectorEstudiantes(vector<Estudiante*>& ,int );
 
 void printVectorEstudiante(vector<Estudiante*>, string);
+void printVectorEstudianteTodos(vector<Estudiante*>);
 
 int main(){
 char ejecucion = 'y';
@@ -53,10 +54,14 @@ do{
             break;
         }
         case 4:{
+            printVectorEstudianteTodos(miVectorEstudiante);
+
+
 
         	break;
         }
         case 5:{
+            printVectorEstudianteTodos(miVectorEstudiante);
 
             
 
@@ -108,8 +113,8 @@ int menu(){
     cout << "1. Crear Micro Empresas." << endl;
     cout << "2. Crear Estudiantes." << endl;
     cout << "3. Filtrar Estudiantes." << endl;
-    cout << "4. Agregar Empleado." << endl;
-    cout << "5. Agregar Pasante." << endl;
+    cout << "4. Agregar a Empleados." << endl;
+    cout << "5. Agregar a Pasantes." << endl;
     cout << "6. Agregar Proveedores." << endl;
     cout << "7. Eliminar Empleado." << endl;
     cout << "8. Eliminar Pasante." << endl;
@@ -184,7 +189,7 @@ void llenarVectorEstudiantes(vector<Estudiante*>& pVectorEstudiante,int cantidad
 }
 
 void printVectorEstudiante(vector<Estudiante*> pVectorEstudiante,string filtrar){
-        cout<<endl<<"*****Reclutas Estudiantes*****"<<endl;
+        cout<<endl<<"*****Reclutas Estudiantes"<<" de "<<filtrar<<"*****"<<endl;
 
         for(int i=0;i<pVectorEstudiante.size();i++){
         	if(pVectorEstudiante[i]->getCarrera() == filtrar){
@@ -200,6 +205,26 @@ void printVectorEstudiante(vector<Estudiante*> pVectorEstudiante,string filtrar)
                     <<"Numero de cuenta: "<<pVectorEstudiante[i]->getNumCuenta()<<endl
                     <<"Indice: "<<pVectorEstudiante[i]->getIndice()<<endl;
         	}
+        }
+}
+
+void printVectorEstudianteTodos(vector<Estudiante*> pVectorEstudiante){
+        cout<<endl<<"*****Reclutas Estudiantes (Todos)*****"<<endl;
+
+        for(int i=0;i<pVectorEstudiante.size();i++){
+        	
+                cout<<"Datos Personales: "<<endl
+                    <<"Nombre: "<<pVectorEstudiante[i]->getNombre()<<endl
+                    <<"Identidad: "<<pVectorEstudiante[i]->getNumIdentidad()<<endl
+                    <<"Edad: "<<pVectorEstudiante[i]->getEdad()<<endl
+                    <<"Sexo: "<<pVectorEstudiante[i]->getSexo()<<endl
+                    <<"Nacionalidad "<<pVectorEstudiante[i]->getNacionalidad()<<endl
+                    <<"Datos De Estudiante: "<<endl
+                    <<"Carrera: "<<pVectorEstudiante[i]->getCarrera()<<endl
+                    <<"Universidad: "<<pVectorEstudiante[i]->getUniversidad()<<endl
+                    <<"Numero de cuenta: "<<pVectorEstudiante[i]->getNumCuenta()<<endl
+                    <<"Indice: "<<pVectorEstudiante[i]->getIndice()<<endl;
+        	
         }
 }
 
